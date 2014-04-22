@@ -1,0 +1,172 @@
+#mainNav{
+	display:block;
+	background:$black;
+
+	ul{
+		display:block;
+		width:100%;
+		max-width:1200px;
+		margin:0 auto;
+		text-align:right;
+		position:relative;
+		li{
+			@include inline-block;
+			height:130px;
+			line-height:130px;
+			a{
+				color:$white;
+				font-family:$mainFont;
+				font-size:16px;
+				display:block;
+				text-decoration:none;
+				padding:0 20px;
+				text-align:center;
+				position:relative;
+				@include transition(all 300ms);
+				&:after{
+					content:"";
+					display:block;
+					width:100%;
+					height:0px;
+					position:absolute;
+					top:130px;
+					background:$green;
+					left:0px;
+					@include transition(all 200ms);
+				}
+				&:hover, &.active{
+					color:$green;
+					&:after{
+						height:5px;
+					}
+				}
+			}
+			&#logo{
+				float:left;
+				img{
+					position:absolute;
+					width:70px;
+					left:10px;
+					top:50%;
+					margin-top:-35px;
+				}
+				a{
+					padding-left:85px;
+					font-size:37px;
+					span{
+						color:$darkGreen;
+					}
+					&:hover{
+						color:$white;
+					}
+				}
+			}
+			&.divider{
+				width:1px;
+				background:#3b3b3b;
+			}
+		}
+	}
+	
+	@media all and (max-width: 780px){
+		ul{
+			li{
+				a{
+					font-size:13px;
+					padding:0 10px;
+				}
+				&#logo{
+					a{
+						font-size:20px;
+					}
+				}
+			}
+		}
+	}
+
+	@media all and (max-width: 550px){
+		position:fixed;
+		top:0px;
+		width:100%;
+		ul{
+			height:70px;
+			border-bottom:1px solid $paleGreen;
+			li{
+				line-height:30px;
+				height:30px;
+				float:left;
+				width:33.333%;
+				background:$green;
+				&.divider{
+					display:none;
+				}
+				a{
+					font-size:14px;
+					&:after{
+						top:auto;
+						bottom:-1px;
+						background:$white;
+					}
+					&:hover, &.active{
+						color:$white;
+						&:after{
+							height:3px;
+						}
+					}
+				}
+				&#homeLink{
+					line-height:40px;
+					height:40px;
+					background:$black;
+					width:70%;
+					a{
+						text-align:left;
+						visibility:hidden;
+						&:after{
+							display:none;
+						}
+					}
+				}
+				&#logo{
+					line-height:40px;
+					height:40px;
+					background:$black;
+					width:30%;
+					img{
+						display:none;
+					}
+					a{
+						font-size:22px;
+						padding:0 10px;
+						text-align:left;
+						&:after{
+							display:none;
+						}
+					}
+				}
+				&#contact{
+					line-height:40px;
+					height:40px;
+					position:absolute;
+					top:0px;
+					right:0px;
+					width:40px;
+					height:40px;
+					background:transparent;
+					border-left:1px solid#3b3b3b;
+					a{
+						text-indent:-999px;
+						overflow:hidden;
+						background:url("../img/contact.png") center center no-repeat;
+						&:after{
+							display:none;
+						}
+					}
+					&:hover{
+						background:$darkGreen;
+					}
+				}
+			}
+		}
+	}
+}

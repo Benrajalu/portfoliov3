@@ -1,0 +1,17 @@
+// Box sizing, dammit
+	*{
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+
+// Colors
+	$black: #404141;
+	$green: #4dbb7d;
+	$paleGreen: #8fdac3;
+	$white:#f4f4f4;
+	$darkGreen:#2bbb77;
+
+// Fonts
+	$mainFont: 'roboto', Arial, Helvetica, sans-serif;
+	$altFont: 'robotoReg', Arial, Helvetica, sans-serif;

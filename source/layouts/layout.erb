@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <!-- Use title if it's in the page YAML frontmatter -->
+        <title><%= current_page.data.title || "Benoit Rajalu" %></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="css/global.css">
+        <script src="js/vendor/modernizr-2.6.1.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+        <![endif]-->
+        <div class="fluidRow" id="scope">
+
+            <nav id="mainNav">
+                <ul>
+                    <li id="logo"><a href="index.html"><img src="img/owl.png" alt="Benoit Rajalu, développeur front-end" /><span>ben</span> rajalu</a></li>
+                    <li id="homeLink"><%= magic_link_to 'home', 'index.html' %></li>
+                    <li class="divider"></li>
+                    <li><%= magic_link_to 'services', 'services.html' %></li>
+                    <li class="divider"></li>
+                    <li><%= magic_link_to 'références', 'references.html' %></li>
+                    <li class="divider"></li>
+                    <li><%= magic_link_to 'a propos', 'about.html' %></li>
+                    <li class="divider"></li>
+                    <li id="contact"><a href="#" class="offTrigger" data-target="#contactBar">contact</a></li>
+                </ul>
+            </nav>
+
+            <%= yield %>
+        </div>
+
+        <aside id="contactBar">
+            <div id="wrapper">
+                <a id="close" href="#" class="closeCanvas" data-target="#contactBar">Fermer la fenêtre</a>
+                <ul id="socialList">
+                    <li id="gplus"><a href="#"></a></li>
+                    <li id="twitter"><a href="#"></a></li>
+                    <li id="flickr"><a href="#"></a></li>
+                </ul>
+
+                <article class="contrastBack">
+                    <h1>Benoit Rajalu</h1>
+                    <h2>Développeur front-end, UI/UX designer</h2>
+                    <ul>
+                        <li><span></span> rajalubenoit@gmail.com</li>
+                        <li><span></span> 0649148645</li>
+                        <li><span></span> Nantes / Rennes / Laval</li>
+                    </ul>
+                </article>
+
+                <form action="" id="contactForm">
+                    <h2>Un petit mot ?</h2>
+                    <input type="text" id="name" name="name" placeholder="Votre nom" />
+                    <input type="email" id="email" name="email" placeholder="Votre email" />
+                    <textarea id="message" name="message" placeholder="Votre message"></textarea>
+                    <input type="submit" value="OK" />
+                </form>
+            </div>
+        </aside>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.0.min.js"><\/script>')</script>
+
+        <script src="js/TweenMax.min.js"></script>
+        <script src="js/offCanvas.js"></script>
+        <script src="js/plugins.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+    </body>
+</html>

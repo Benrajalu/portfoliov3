@@ -5,9 +5,11 @@ $.fn.offCanvas = function(){
 			$('html').css("overflow", "hidden");
 			var op = new TimelineLite();
 			    op.to(tar,0.3,{display:"block", right:0});
-			    if(Modernizr.mq('only all and (min-width: 551px)')){
+			    if(Modernizr.mq('only all and (min-width: 551px)') || $("#scope").attr("data-pushed") === "true"){
 					var bp = new TimelineLite();
 					bp.to("#scope",0.3,{position:'relative', right:"350px"});
+                    $("#scope").attr("data-pushed", "true");
+                    console.log("open");
 				}
 		}
 
@@ -15,9 +17,12 @@ $.fn.offCanvas = function(){
 			var oc = new TimelineLite();
 			    oc.to(tar,0.3,{right:-350, display:"none"});
 			    oc.to('html',0.1,{overflow:"auto"});
-			if(Modernizr.mq('only all and (min-width: 551px)')){
-				var bc = new TimelineLite();
-				bc.to("#scope",0.3,{position:'relative', right:"0"});
+			if(Modernizr.mq('only all and (min-width: 551px)') || $("#scope").attr("data-pushed") === "true"){
+                var bc = new TimelineLite();
+				bc.to("#scope",0.3,{position:'position', right:"0px"});
+                console.log("close");
+                $("#scope").attr("data-pushed", "false");
+                setTimeout(function(){$("#scope").removeAttr("style");},300);
 			}
 		}
 

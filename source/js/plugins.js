@@ -38,12 +38,14 @@ $(document).ready(function () {
 		var sendMessage = function(){
 			if (true === $('#contactForm').parsley().isValid()) {
 				event.preventDefault();
+				$("#contactForm").find("#submit").attr("value", "Envoi en cours...").attr("disabled", "disabled");
 				$.ajax({
 				  type: "POST",
 				  url: "send.php",
 				  data: $("#contactForm").serialize(),
 				  success: function() {
 				    $('#feedback').addClass("success").html("Message reçu");
+				    $("#contactForm").find("#submit").attr("value", "Nouvel envoi").removeAttr("disabled");
 				  }, 
 				  error: function() {
 				  	$('#feedback').removeClass("success").html("Oups, soucis de script. Merci de me joindre via email !");

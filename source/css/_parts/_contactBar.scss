@@ -2,10 +2,12 @@
 
 #contactBar{
 	display:none;
-	position:absolute;
+	position:fixed;
 	top:0px;
 	right:-350px;
+	overflow:hidden;
 	height:100%;
+	max-width:100%;
 	width:350px;
 	background:$black;
 	z-index:999;
@@ -124,6 +126,8 @@
 		margin-bottom:10px;
 		display:block;
 		width:100%;
+		-webkit-appearance: none;
+		@include border-radius(0px);
 		@include roboto(12px, $green);
 		&:focus, &:active{
 			border:1px solid $paleGreen;
@@ -138,9 +142,20 @@
 			border:1px solid $green;
 			cursor:pointer;
 			@include transition(all 300ms);
+			background:$black;
+			color:$green;
 			&:hover{
 				background:$green;
 				color:$white;
+			}
+			&[disabled="disabled"]{
+				background:$paleGreen;
+				color:$black;
+				cursor: default;
+				&:hover{
+					background:$paleGreen;
+					color:$black;
+				}
 			}
 		}
 		&.parsley-error{
@@ -171,8 +186,9 @@
 	}
 
 	#feedback{
-		@include roboto(12px, #d31515);
+		@include roboto(13px, #d31515);
 		margin:5px 0px 10px 0px;
+		line-height:15px;
 		&.success{
 			color:$green;
 		}

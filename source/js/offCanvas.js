@@ -21,7 +21,8 @@ $.fn.offCanvas = function(){
                 var bc = new TimelineLite();
 				bc.to("#scope",0.3,{position:'position', right:"0px"});
                 $("#scope").attr("data-pushed", "false");
-                setTimeout(function(){$("#scope").removeAttr("style");},300);
+                setTimeout(function(){$("#scope").removeAttr("style").removeClass("showTime");},300);
+                //setTimeout(function(){$(tar).removeAttr("style").removeClass("showTime");},400);
 			}
 		}
 
@@ -53,7 +54,7 @@ $.fn.offCanvas = function(){
 
 
 
-        $.fn.gladysPublic = function(methodOrOptions) {
+        $.fn.offCanvas = function(methodOrOptions) {
             if ( methods[methodOrOptions] ) {
                 return methods[ methodOrOptions ].apply( this, Array.prototype.slice.call( arguments, 1 ));
             } else if ( typeof methodOrOptions === 'object' || ! methodOrOptions ) {

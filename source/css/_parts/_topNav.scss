@@ -115,10 +115,7 @@
 					}
 				}
 				&#homeLink{
-					line-height:40px;
-					height:40px;
-					background:$black;
-					width:70%;
+					display:none;
 					a{
 						text-align:left;
 						visibility:hidden;
@@ -131,7 +128,7 @@
 					line-height:40px;
 					height:40px;
 					background:$black;
-					width:30%;
+					width:100%;
 					img{
 						display:none;
 					}

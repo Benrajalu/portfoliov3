@@ -132,7 +132,7 @@
 		&[type="text"], &[type="email"]{
 			display:inline-block;
 			width:49%;
-			
+
 		} 
 		&[type="submit"]{
 			border:1px solid $green;
@@ -142,6 +142,9 @@
 				background:$green;
 				color:$white;
 			}
+		}
+		&.parsley-error{
+			border:1px solid #d31515;
 		}
 	}
 	input{
@@ -161,6 +164,17 @@
 		}
 		textarea{
 			min-height:100px;
+		}
+	}
+	.parsley-errors-list{
+		display:none;
+	}
+
+	#feedback{
+		@include roboto(12px, #d31515);
+		margin:5px 0px 10px 0px;
+		&.success{
+			color:$green;
 		}
 	}
 }

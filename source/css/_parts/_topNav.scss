@@ -92,6 +92,7 @@
 		position:fixed;
 		top:0px;
 		width:100%;
+		z-index:999;
 		ul{
 			height:70px;
 			border-bottom:1px solid $paleGreen;
@@ -133,6 +134,9 @@
 					height:40px;
 					background:$black;
 					width:100%;
+					&:before{
+						display:none;
+					}
 					img{
 						display:none;
 					}
@@ -169,5 +173,11 @@
 				}
 			}
 		}
+	}
+}
+
+#scope{
+	@media all and (max-width: 550px){
+		padding-top:70px;
 	}
 }

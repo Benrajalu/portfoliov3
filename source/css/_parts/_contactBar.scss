@@ -78,7 +78,7 @@
 		margin-bottom:5px;
 	}
 	h2{
-		@include roboto(15px, $black);
+		@include robotoReg(14px, $black);
 		margin-bottom:20px;
 	}
 	ul{
@@ -93,6 +93,10 @@
 				margin-right:10px;
 				position:relative;
 				top:3px;
+			}
+			a{
+				text-decoration:none;
+				color:$white;
 			}
 		}
 	}
@@ -128,7 +132,7 @@
 		width:100%;
 		-webkit-appearance: none;
 		@include border-radius(0px);
-		@include roboto(12px, $green);
+		@include robotoReg(12px, $green);
 		&:focus, &:active{
 			border:1px solid $paleGreen;
 			outline:0px;
@@ -173,9 +177,12 @@
 	@media all and (max-width: 780px){
 		padding:0 10px;
 		input{
-			height:25px;
+			height:30px;
 			line-height:25px;
 			padding:0px 4px;
+			&[type="submit"]{
+				height:35px;
+			}
 		}
 		textarea{
 			min-height:100px;

@@ -43,7 +43,11 @@
 			}
 			&#logo{
 				float:left;
-				img{
+				&:before{
+					display:block;
+					content:"";
+					height:91px;
+					background:url("../img/owl.png") center center no-repeat;
 					position:absolute;
 					width:70px;
 					left:10px;

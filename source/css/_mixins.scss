@@ -3,3 +3,9 @@
 	font-size:$size;
 	color:$color;
 }
+
+@mixin robotoReg($size, $color){
+	font-family:'robotoReg', Arial, Helvetica, sans-serif;
+	font-size:$size;
+	color:$color;
+}

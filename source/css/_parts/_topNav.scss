@@ -43,7 +43,11 @@
 			}
 			&#logo{
 				float:left;
-				img{
+				&:before{
+					display:block;
+					content:"";
+					height:91px;
+					background:url("../img/owl.png") center center no-repeat;
 					position:absolute;
 					width:70px;
 					left:10px;
@@ -115,10 +119,7 @@
 					}
 				}
 				&#homeLink{
-					line-height:40px;
-					height:40px;
-					background:$black;
-					width:70%;
+					display:none;
 					a{
 						text-align:left;
 						visibility:hidden;
@@ -131,7 +132,7 @@
 					line-height:40px;
 					height:40px;
 					background:$black;
-					width:30%;
+					width:100%;
 					img{
 						display:none;
 					}

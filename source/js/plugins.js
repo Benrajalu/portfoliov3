@@ -11,5 +11,52 @@ if (!(window.console && console.log)) {
     }());
 }
 
+
+$(document).ready(function () {
+	// Parsley
+		$.listen('parsley:field:validate', function () {
+			validateFront();
+		});
+
+		$.listen('parsley:form:validated', function() {
+			sendMessage();
+		});
+
+		$('#contactForm input[type="submit"]').on('click', function () {
+		  $('#contactForm').parsley().validate();
+		  validateFront();
+		});
+
+		var validateFront = function () {
+		  if (true === $('#contactForm').parsley().isValid()) {
+		    $('#feedback').addClass('hidden').html("");
+		  } else {
+		    $('#feedback').removeClass('hidden').html("Tous les champs sont obligatoires, et votre adresse email doit être valide...");
+		  }
+		};
+
+		var sendMessage = function(){
+			if (true === $('#contactForm').parsley().isValid()) {
+				event.preventDefault();
+				$("#contactForm").find("#submit").attr("value", "Envoi en cours...").attr("disabled", "disabled");
+				$.ajax({
+				  type: "POST",
+				  url: "send.php",
+				  data: $("#contactForm").serialize(),
+				  success: function() {
+				    $('#feedback').addClass("success").html("Message reçu");
+				    $("#contactForm").find("#submit").attr("value", "Nouvel envoi").removeAttr("disabled");
+				  }, 
+				  error: function() {
+				  	$('#feedback').removeClass("success").html("Oups, soucis de script. Merci de me joindre via email !");
+				  }
+				});
+				return false;
+			} else {
+			  $('#feedback').removeClass('success').html("Tous les champs sont obligatoires, et votre adresse email doit être valide...");
+			}
+		}
+});
+
 // Place any jQuery/helper plugins in here.
 $("#contactBar").offCanvas();

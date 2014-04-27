@@ -1,0 +1,73 @@
+---
+title: Portfolio hive
+---
+
+<div class="rowFluid backstretch secondary" data-source="img/workBG.jpg">
+	<div class="titleDisc ml">
+		<hgroup class="contents">
+			<h1>Références</h1>
+			<h2>Travaux, publics !</h2>
+		</hgroup>
+	</div>
+</div>
+
+
+<div class="row vertHolder">
+	<div class="large-4 medium-6 columns vParent">
+	  	<article class="intro xs vChild">
+	  		    <div class="centerPiece">
+	  		        <h2>Featured</h2>
+	  		        <p>Une sélection des dernières livraisons, ou de celles que j'aime montrer</p>
+	  		    </div>
+	  		    <div class="plus"></div>
+	  	</article>
+	</div>
+	<% data.works.each_with_index do |f, index| %>
+		<%	if index < 5 %>
+			<div class="large-4 medium-6 columns">
+			  	<article class="work vSizer">
+			  		    <div class="centerPiece">
+			  		        <div class="centralDisc"><a href="#"><img src="img/projects/<%= f["clean"] %>-logo.png" alt="<%= f["title"] %>" /></a></div>
+			  		        <a href="reference/<%= f["clean"] %>.html" class="left smallDisc"></a>
+			  		        <a href="<%= f["goTo"] %>" target="_blank" class="right smallDisc"></a>
+			  		    </div>
+			  		    <div class="illus"><a href="#"><img src="img/projects/<%= f["clean"] %>-back.jpg" alt="<%= f["description"] %>" /></a></div>
+			  	</article>
+			</div>
+		<% end %>
+	<% end %>
+</div>
+<div class="rowFluid">
+	<div class="row">
+		<div class="large-7 columns large-push-5 columns">
+			<article class="intro xl">
+				    <div class="centerPiece">
+				        <h2>Votre projet</h2>
+				        <p>Ajoutons à cette liste un projet dont nous pouvons être fiers !</p>
+				        <a class="button offTrigger" data-target="#contactBar" href="#">Contactez-moi</a>
+				    </div>
+				    <div class="plus"></div>
+			</article>
+		</div>
+	</div>
+</div>
+
+<div class="rowFluid black">
+	<div class="row table-large">
+		<div class="large-5 columns">
+			<article class="copy mobileFeature white">
+				<h2 class="title xxl noMarg">Archives</h2>
+				<p>D’autres projets, moins récents, qui m’ont toujours beaucoup appris.</p>
+			</article>
+		</div>
+		<div class="large-7 columns">
+			<ul class="archiveList">
+				<% data.works.each_with_index do |f, index| %>
+					<%	if index > 5 %>
+						<li><a href="references/<%= f["clean"] %>.html"><%= f["title"] %></a></li>
+					<% end %>
+				<% end %>
+			</ul>
+		</div>
+	</div>
+</div>

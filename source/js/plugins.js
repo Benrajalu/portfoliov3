@@ -56,6 +56,51 @@ $(document).ready(function () {
 			  $('#feedback').removeClass('success').html("Tous les champs sont obligatoires, et votre adresse email doit être valide...");
 			}
 		}
+
+	// Backstretch
+		$(".backstretch").each(function(){
+			var src = $(this).attr("data-source");
+			$(this).backstretch(src);
+		})
+
+	// Vertical align
+		var verticalAlign = function(){
+			if(Modernizr.mq('only all and (min-width: 781px)')){
+				$(".vertHolder").each(function(){
+					var h = $(this).find(".vSizer").outerHeight() + "px";
+					$(this).find(".vParent").css({"line-height": h, "height" : h});
+				})
+			}
+		}
+		verticalAlign();
+		$(window).resize(function(){
+			verticalAlign();
+		})
+
+	// Work
+		$(".work").each(function(){
+		    var lefty = $(this).find(".smallDisc.left");
+		    var righty = $(this).find(".smallDisc.right");
+		    
+		    var tl = new TimelineLite();
+		    tl.pause();
+		    tl.to(lefty,0.2,{left:-55,zIndex:1, ease:Back.easeOut});
+		    tl.to(lefty,0.2,{left:-5, zIndex:4});
+		    
+		    var tr = new TimelineLite();
+		    tr.pause();
+		    tr.to(righty,0.2,{right:-55,zIndex:1, ease:Back.easeOut});
+		    tr.to(righty,0.2,{right:-5, zIndex:4});
+		   
+		    $(this).hover(function(){
+		        tl.play();
+		        tr.play();
+		    },function(){
+		        tl.reverse();
+		        tr.reverse();
+		    });
+		});
+	  
 });
 
 // Place any jQuery/helper plugins in here.

@@ -1,0 +1,43 @@
+// Titles inside discs
+	.titleDisc{
+		display:block;
+		width:300px;
+		height:300px;
+		line-height:300px;
+		position:absolute;
+		top:50%;
+		left:50%;
+		margin-top:-150px;
+		margin-left:-150px;
+		background:rgba(245,245,245,0.9);
+		@include border-radius(999px);
+		text-align: center;
+		.contents{
+			@include inline-block;
+			line-height:35px;
+			vertical-align: middle;
+			text-align: center;
+		}
+		h1{
+			@include roboto(40px, $black);
+		}
+		h2{
+			@include robotoReg(12px, $darkGreen);
+			text-transform: uppercase;
+		}
+		&.ml{
+			width:200px;
+			height:200px;
+			margin:-100px 0px 0px -100px;
+			line-height:200px;
+			h1{
+				@include roboto(35px, $black);
+				margin:0px;
+			}
+			h2{
+				@include robotoReg(12px, $darkGreen);
+				text-transform: uppercase;
+				margin:-8px 0 0 0;
+			}
+		}
+	}

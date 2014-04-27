@@ -1,0 +1,12 @@
+// Vertical align
+	.vParent{
+		display:block;
+	}
+	.vChild{
+		@include inline-block;
+		vertical-align: middle;
+		line-height:1;
+	}
+	.vSizer{
+		margin:20px 0px;
+	}

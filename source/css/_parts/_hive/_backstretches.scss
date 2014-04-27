@@ -1,0 +1,17 @@
+// Backstreches
+	.backstretch{
+		@include transition(all 300ms);
+		&.main{
+			height:500px;
+			@media all and (max-width: 550px){
+				height:400px;
+			}
+		}
+		&.secondary{
+			height:300px;
+			margin-bottom:70px;
+		}
+		&.service{
+			min-height:200px;
+		}
+	}

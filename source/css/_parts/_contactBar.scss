@@ -193,7 +193,7 @@
 	}
 
 	#feedback{
-		@include roboto(13px, #d31515);
+		@include robotoReg(13px, #d31515);
 		margin:5px 0px 10px 0px;
 		line-height:15px;
 		&.success{

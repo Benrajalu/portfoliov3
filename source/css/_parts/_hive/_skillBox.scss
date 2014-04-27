@@ -1,0 +1,37 @@
+// A box of skillsets
+	.skillBox{
+		display:block;
+		border:1px solid $green;
+		text-align:center;
+		position:relative;
+		max-width:220px;
+		margin:50px auto 10px auto;
+		padding:55px 10px 10px 10px;
+		background:$white;
+		> .title{
+			position:absolute;
+			display:block;
+			width:90px;
+			height:90px;
+			@include border-radius(999px);
+			background:$green;
+			line-height:90px;
+			left:50%;
+			top:-45px;
+			margin-left:-45px;
+			span{
+				@include roboto(18px, $white);
+				line-height:20px;
+				@include inline-block;
+				vertical-align: middle;
+			}
+		}
+		>ul{
+			margin:0px 0px 20px 0px;
+			padding:0px;
+			li{
+				@include roboto(14px, $black);
+				margin-bottom:3px;
+			}
+		}
+	}

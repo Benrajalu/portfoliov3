@@ -124,6 +124,26 @@
 				right:0px;
 				margin-top:-35px;
 			}
+			@media all and (max-width: 780px){
+				.centerPiece{
+					padding:80px 90px 0px 0px;
+				}
+				.plus{
+					right:0px;
+					margin:0px;
+				}
+			}
+			@media all and (max-width: 550px){
+				.centerPiece{
+					padding:0px 0px 0px 90px;
+					text-align:left;
+				}
+				.plus{
+					right:auto;
+					left:0px;
+					margin-top:-30px;
+				}
+			}
 		}
 		&.xl{
 			text-align:left;
@@ -158,6 +178,19 @@
 				left:15px;
 				margin-top:-60px;
 			}
+			@media all and (max-width: 780px){
+				display:block;
+				.centerPiece{
+					display:block;
+					padding:140px 20px 0px 20px;
+					text-align:center;
+				}
+				.plus{
+					left:50%;
+					top:0px;
+					margin:0px 0px 0 -60px;
+				}
+			}
 		}
 	}
 
@@ -181,6 +214,78 @@
 				&:hover{
 					border-bottom:1px solid $green;
 					color:$green;
+				}
+			}
+		}
+	}
+
+// Return
+	.return{
+		@include roboto(18px, $white);
+		text-decoration:none;
+		margin-bottom:25px;
+		position:relative;
+		display:block;
+		padding-left:25px;
+		@include transition(all 300ms);
+		&:before{
+			content:"";
+			width:20px;
+			height:20px;
+			display:block;
+			background:$white url("../img/return.png") center center no-repeat;
+			line-height:20px;
+			text-align:center;
+			color:$green;
+			@include border-radius(9999px);
+			position:absolute;
+			left:0px;
+			top:50%;
+			margin-top:-10px;
+			@include transition(all 300ms);
+		}
+		&:hover{
+			color:$black;
+			&:before{
+				background-color:$black;
+			}
+		}
+	}
+
+// Project list
+	.projectList{
+		display:block;
+		dd, dt{
+			display:inline-block;
+			vertical-align: top;
+			margin:0 5px 10px 0px;
+			span{
+				display:block;
+				margin-bottom:5px;
+			}
+		}
+		dt{
+			background:$green;
+			@include roboto(13px, $white);
+			padding:0px 10px;
+			line-height:17px;
+			@include border-radius(2px);
+			&:before{
+				display:block;
+				content:" ";
+			}
+		}
+		dd{
+			@include roboto(13px, $black);
+			margin-right:15px;
+			a{
+				color:$black;
+				border-bottom:1px dashed $black;
+				text-decoration: none;
+				@include transition(all 300ms);
+				&:hover{
+					color:$green;
+					border-bottom:1px solid $green;
 				}
 			}
 		}

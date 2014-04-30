@@ -67,8 +67,14 @@ configure :build do
   # Use relative URLs
   activate :relative_assets
 
+  activate :directory_indexes
+
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
+end
+
+data.works.each do |item|
+  proxy "/references/#{item.clean}.html", "/work.html", :locals => { :code => item }, :ignore => true
 end
 
 helpers do

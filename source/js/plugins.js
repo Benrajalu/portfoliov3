@@ -59,7 +59,8 @@ $(document).ready(function () {
 
 	// Backstretch
 		$(".backstretch").each(function(){
-			var src = $(this).attr("data-source");
+			$(this).find(".source").hide();
+			var src = $(this).find(".source").attr("src");
 			$(this).backstretch(src);
 		})
 
@@ -100,7 +101,7 @@ $(document).ready(function () {
 		        tr.reverse();
 		    });
 		});
-	  
+
 });
 
 // Place any jQuery/helper plugins in here.

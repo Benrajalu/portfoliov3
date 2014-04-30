@@ -1,6 +1,7 @@
 // Where the copy lives
 
 	.copy{
+		margin-bottom:30px;
 		&.rightPad60{
 			padding-right:60px;
 		}
@@ -11,14 +12,30 @@
 				padding-right:60px;
 			}
 		}
+		&.workIntro{
+			p{
+				margin-bottom:10px;
+				font-size:13px;
+				&.credit{
+					margin-bottom:0px;
+				}
+			}
+			.button{
+				margin-top:30px;
+			}
+			h2{
+				margin-bottom:0px;
+			}
+		}
 		p{
 			@include roboto(12px, $black);
 			line-height:20px;
-			margin-bottom:20px;
+			margin-bottom:10px;
 			a{
 				color:$green;
 				border-bottom:1px dashed $green;
 				@include transition(all 300ms);
+				text-decoration: none;
 				&:hover{
 					color:$black;
 					border-bottom:1px solid $black;
@@ -26,6 +43,9 @@
 			}
 			&.green{
 				@include robotoReg(12px, $green);
+			}
+			strong{
+				font-family:'robotoReg';
 			}
 		}
 		h2{
@@ -54,9 +74,40 @@
 		&.white{
 			p{
 				color:$white;
+				a{
+					color:$white;
+					border-bottom:1px dashed $white;
+					&:hover{
+						color:$black;
+						border-bottom:1px solid $black;
+					}
+				}
+			}
+			h1, h2, h3, h4, h5, h6{
+				&.title{
+					@include roboto(40px, $white);
+					&.xs{
+						font-size:21px;
+					}
+					&.xxl{
+						font-size:60px;
+					}
+				}
+				&.noMarg{
+					margin:0px;
+				}
+			}
+			.button{
+				border:1px solid $white;
+				color:$white;
+				&:hover{
+					background:$white;
+					color:$black;
+				}
 			}
 		}
 		h1, h2, h3, h4, h5, h6{
+			margin:0px 0px 15px 0px;
 			&.title{
 				@include roboto(40px, $green);
 				&.xs{
@@ -78,4 +129,9 @@
 				margin: 0 auto;
 			}
 		}
+	}
+
+// Images
+	.featured{
+		margin:20px 0px;
 	}

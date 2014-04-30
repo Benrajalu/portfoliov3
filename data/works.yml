@@ -1,11 +1,38 @@
 - title: "Evolis"
   clean: "evolis"
-  description: "Site Drupal multi-lingues pour Evolis"
+  description: "Evolis a voulu moderniser son site vitrine, son catalogue de produits. L'agence Intuiti a pris en charge le projet, aidé pour le développement par Makina Corpus."
   goTo: "http://us.evolis.com"
+  credits: 
+        "<p class=\"credit\"><strong>Gestion de projet : </strong> <a href=\"http://www.intuiti.net\" target=\"_blank\">Intuiti</a></p>
+        <p class=\"credit\"><strong>Design : </strong> <a href=\"http://www.intuiti.net\" target=\"_blank\">Noemie Deschamps, Intuiti</a></p>
+        <p class=\"credit\"><strong>Developpement : </strong> <a href=\"http://www.makina-corpus.com\" target=\"_blank\">Makina Corpus</a></p>
+        <p class=\"credit\"><strong>Prestation :</strong> Intégration</p>"
+  copy: 
+        "<h3>Drupal</h3>
+        <p>Les choix technologiques étaient en place avant que j'intervienne sur le projet. J'ai donc du me greffer à une architecture Drupal qui m'était alors tout à fait inconnue.</p>
+        <p>Une difficulté supplémentaire était d'intégrer une trentaine de gabarits différents dans cet outil qui n'est pas spécialement adapté à un tel étalage de templates...</p>
+        <p>Au final, le site fourni tente au maximum de limiter la pléthore de markup non sémantique livré par le CMS et d'offrir via le HTML5 le maximum de sens possible.</p>"
+  images:
+        - "evolis-image1.png"
+  type: "- Imprimantes à cartes"
 - title: "WRAH LLC"
   clean: "wrah"
-  description: "Site responsive pour WRAH LLC"
+  description: "Petite équipe web à géométrie variable, WRAH cherchait un site simple et effiicace pour expliquer son activité. Un design “plat”, un site responsive et une rédaction sur-mesure étaient les seuls paramètres solides du brief."
   goTo: "http://www.wrahllc.com"
+  credits: 
+        "<p class=\"credit\"><strong>Gestion de projet : </strong> <a href=\"http://www.wrahllc.com\" target=\"_blank\">WRAH LLC</a></p>
+        <p class=\"credit\"><strong>Prestation :</strong> Sitemap, wireframes, webdesign, rédaction, intégration responsive</p>"
+  copy: 
+        "<h3>Design</h3>
+        <p>L’objectif de ce site n’était pas seulement de présenter clairement l’activité de l’annonceur, mais aussi d’être réalisé en un temps record.</p>
+        <p>Avec un brief très court et très peu de ressources, le design final répond à un impératif de fonctionnalité tout en apportant une touche de modernité qui correspond aux préférences esthétiques du client.</p>
+        <h3>Responsive</h3>
+        <p>Gagner du temps ne devrait jamais vouloir dire sacrifier le confort de l’utilisateur.</p> 
+        <p>En utilisant le framework foundation et une ruche maison de blocs HTML / CSS préfaits, ce site bénéficie malgré son brief minimaliste des avantages du responsive webdesign.</p>"
+  images:
+        - "wrah-image1.png"
+        - "wrah-image2.jpg"
+  type: "- Collectif web"
 - title: "Gladys"
   clean: "gladys"
   description: "Développement front-end pour Gladys"

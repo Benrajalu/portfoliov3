@@ -1,0 +1,36 @@
+---
+title: <%= locals[:code].title %> - Benoit Rajalu - Développemeur web front-end
+description: "#{locals[:code].description}"
+---
+
+<% p = locals[:code] %>
+
+<div class="rowFluid green pad40 mar60">
+	<div class="row table-large">
+		<div class="large-6 columns">
+			<article class="copy white workIntro mobileFeature">
+				<%= link_to 'Tous les projets', '/references.html', :class => 'return' %>
+				<h2 class="title xxl noMarg"><%= p.title %></h2>
+				<h3 class="title xs"><%= p.type %></h3>
+				<p><%= p.description %></p>
+				<%= p.credits %>
+				<%= link_to 'Voir le site', p.goTo, :class => 'button', :target => "_blank" %>
+			</article>
+		</div>
+		<div class="large-6 columns">
+			<%= image_tag 'projects/' + p.clean + '-header.png', :alt => p.title, :class => "featured" %>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="large-4 columns">
+		<article class="copy">
+			<%= p.copy %>
+		</article>
+	</div>
+	<div class="large-7 large-push-1 columns images">
+		<% p.images.each_with_index do |f, index| %>
+			<%= image_tag 'projects/' + f, :alt => "#{p.title} image #{index + 1}" %>
+		<% end %>
+	</div>
+</div>

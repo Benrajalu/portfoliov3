@@ -2,7 +2,8 @@
 title: Portfolio hive
 ---
 
-<div class="rowFluid backstretch secondary" data-source="img/workBG.jpg">
+<div class="rowFluid backstretch secondary">
+	<%= image_tag 'workBG.jpg', :alt => "backstretch", :class => 'source' %>
 	<div class="titleDisc ml">
 		<hgroup class="contents">
 			<h1>Références</h1>
@@ -17,7 +18,7 @@ title: Portfolio hive
 	  	<article class="intro xs vChild">
 	  		    <div class="centerPiece">
 	  		        <h2>Featured</h2>
-	  		        <p>Une sélection des dernières livraisons, ou de celles que j'aime montrer</p>
+	  		        <p>Une sélection des dernières livraisons, ou de celles que j'aime montrer.</p>
 	  		    </div>
 	  		    <div class="plus"></div>
 	  	</article>
@@ -27,11 +28,19 @@ title: Portfolio hive
 			<div class="large-4 medium-6 columns">
 			  	<article class="work vSizer">
 			  		    <div class="centerPiece">
-			  		        <div class="centralDisc"><a href="#"><img src="img/projects/<%= f["clean"] %>-logo.png" alt="<%= f["title"] %>" /></a></div>
-			  		        <a href="reference/<%= f["clean"] %>.html" class="left smallDisc"></a>
+			  		        <div class="centralDisc">
+			  		        	<% link_to '/references/' + f["clean"] + '.html' do %>
+			  		        		<%= image_tag 'projects/' + f["clean"] + '-logo.png', :alt => f["title"] %>
+			  		        	<% end %>
+			  		        </div>
+			  		        <%= link_to '', '/references/' + f["clean"] + '.html', :class => 'left smallDisc' %>
 			  		        <a href="<%= f["goTo"] %>" target="_blank" class="right smallDisc"></a>
 			  		    </div>
-			  		    <div class="illus"><a href="#"><img src="img/projects/<%= f["clean"] %>-back.jpg" alt="<%= f["description"] %>" /></a></div>
+			  		    <div class="illus">
+			  		    	<% link_to '/references/' + f["clean"] + '.html' do %>
+			  		    		<%= image_tag 'projects/' + f["clean"] + '-back.jpg', :alt => f["description"] %>
+			  		    	<% end %>
+			  		    </div>
 			  	</article>
 			</div>
 		<% end %>
@@ -64,7 +73,9 @@ title: Portfolio hive
 			<ul class="archiveList">
 				<% data.works.each_with_index do |f, index| %>
 					<%	if index > 5 %>
-						<li><a href="references/<%= f["clean"] %>.html"><%= f["title"] %></a></li>
+						<li>
+							<%= link_to f["title"], '/references/' + f["clean"] + '.html' %>
+						</li>
 					<% end %>
 				<% end %>
 			</ul>

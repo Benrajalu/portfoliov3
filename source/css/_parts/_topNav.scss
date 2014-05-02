@@ -56,6 +56,16 @@
 					left:10px;
 					top:50%;
 					margin-top:-35px;
+					@media
+					only screen and (-webkit-min-device-pixel-ratio: 2),
+					only screen and (   min--moz-device-pixel-ratio: 2),
+					only screen and (     -o-min-device-pixel-ratio: 2/1),
+					only screen and (        min-device-pixel-ratio: 2),
+					only screen and (                min-resolution: 192dpi),
+					only screen and (                min-resolution: 2dppx) { 
+						background:url("../img/owlX2.png") center center no-repeat;
+						background-size:70px 91px;
+					}
 				}
 				a{
 					padding-left:85px;
@@ -175,6 +185,18 @@
 					}
 				}
 			}
+		}
+	}
+	@media
+	only screen and (max-width: 550px) and (-webkit-min-device-pixel-ratio: 2),
+	only screen and (max-width: 550px) and (   min--moz-device-pixel-ratio: 2),
+	only screen and (max-width: 550px) and (     -o-min-device-pixel-ratio: 2/1),
+	only screen and (max-width: 550px) and (        min-device-pixel-ratio: 2),
+	only screen and (max-width: 550px) and (                min-resolution: 192dpi),
+	only screen and (max-width: 550px) and (                min-resolution: 2dppx) { 
+		ul li#contact a{
+			background:url("../img/contactX2.png") center center no-repeat;
+			background-size:30px 30px;
 		}
 	}
 }

@@ -24,13 +24,13 @@
 				margin-top:30px;
 			}
 			h2{
-				margin-bottom:0px;
+				margin-bottom:10px;
 			}
 		}
 		p{
-			@include roboto(12px, $black);
+			@include roboto(13px, $black);
 			line-height:20px;
-			margin-bottom:10px;
+			margin-bottom:20px;
 			a{
 				color:$green;
 				border-bottom:1px dashed $green;
@@ -46,6 +46,9 @@
 			}
 			strong{
 				font-family:'robotoReg';
+			}
+			&:last-child{
+				margin-bottom:10px;
 			}
 		}
 		h2{

@@ -14,7 +14,7 @@
         <p>Au final, le site fourni tente au maximum de limiter la pléthore de markup non sémantique livré par le CMS et d'offrir via le HTML5 le maximum de sens possible.</p>"
   images:
         - "evolis-image1.png"
-  type: "- Imprimantes à cartes"
+  type: "- Catalogue industriel sous Drupal"
 - title: "WRAH LLC"
   clean: "wrah"
   description: "Petite équipe web à géométrie variable, WRAH cherchait un site simple et effiicace pour expliquer son activité. Un design “plat”, un site responsive et une rédaction sur-mesure étaient les seuls paramètres solides du brief."
@@ -32,60 +32,90 @@
   images:
         - "wrah-image1.png"
         - "wrah-image2.jpg"
-  type: "- Collectif web"
+  type: "- Site vitrine responsive"
 - title: "Gladys"
   clean: "gladys"
-  description: "Développement front-end pour Gladys"
+  description: "Gladys est une web app en construction. Son but est simple : tout faire à votre place. Tous vos flux d'information sont pris en charge par Gladys qui les trie et vous les livre selon votre convenance - le tout bien-sûr aussi bien sur votre ordinateur que sur votre smartphone."
   goTo: "http://www.gladys.com"
+  credits: 
+        "<p class=\"credit\"><strong>Gestion de projet, développement : </strong> <a href=\"http://www.glady.com\" target=\"_blank\">Gladys</a></p>
+        <p class=\"credit\"><strong>Design : </strong> <a href=\"http://www.sensipode.com/\" target=\"_blank\">Sensipodes</a></p>
+        <p class=\"credit\"><strong>Prestation :</strong> Développement front-end</p>"
+  copy: 
+        "<h3>Sur-mesure</h3>
+        <p>Gladys fonctionne avec une profusion de plugins sur-mesure en jQuery, presque tous relatifs à la taille de l'écran utilisé. J'ai pu développer un compteur de tags dynamiques, un menu dynamique contextuel, une gestion poussée des animations etc...</p>
+        <h3>Modularité</h3>
+        <p>Une autre proposition de travail était d'utiliser une ruche : une page de test, visible ici, et contenant tous les blocs html et leurs styles écris en SASS. Ces blocs sont ceux qui seront utilisés sur le site.</p> 
+        <p>Cette technique permet de simplifier considérablement les tests de compatibilité navigateurs, tout en permettant au chef de projet de construire lui-même des templates par de simples copiés-collés.</p>"
+  images:
+        - "gladys-image1.jpg"
+  type: "- Web app responsive"
 - title: "BEM in Paris"
   clean: "bem"
-  description: "Intégration site statique BEM in Paris"
+  description: "BEM in Paris est un site touristique dédié aux Portuguais (et Français) souhaitant découvrir la France par le biais de voyages organisés. Le site se devait de transmettre le goût pour les belles choses que ces voyages tentent de nourrir !"
   goTo: "http://www.beminparis.com"
+  credits: 
+        "<p class=\"credit\"><strong>Gestion de projet, développement : </strong> <a href=\"http://www.wrahllc.com\" target=\"_blank\">WRAH LLC</a></p>
+        <p class=\"credit\"><strong>Design : </strong> <a href=\"http://www.liigat.fr/\" target=\"_blank\">Lligat</a></p>
+        <p class=\"credit\"><strong>Prestation :</strong> Développement front-end</p>"
+  copy: 
+        "<h3>Pixel perfect</h3>
+        <p>L'un des intérêts principaux de mon travail sur ce site était de reproduire au plus juste les gabarits travaillés et soignés qui m'ont été fournis. Le rendu final respect ce materiel original et trouve sa place sur tous les navigateurs visés !</p>"
+  images:
+        - "bem-image1.jpg"
+  type: "- Vitrine de tour operator"
 - title: "Morning by Foley"
   clean: "foley"
-  description: "Intégration responsive d'un thème Wordpress"
-  goTo: "http://www.morningbyfoley.com"
-- title: "Chehuei Paris"
+  description: "Foley blogue, elle blogue même beaucoup et joliement. Lassée du design de son site, elle a demandé à WRAH d'intégrer et de développer un site wordpress autour d'une nouvelle identité visuelle"
+  goTo: "http://morning-by-foley.com/"
+  credits: 
+        "<p class=\"credit\"><strong>Gestion de projet : </strong> <a href=\"http://www.wrahllc.com\" target=\"_blank\">WRAH LLC</a></p>
+        <p class=\"credit\"><strong>Design : </strong> <a href=\"http://morning-by-foley.com/\" target=\"_blank\">Foley</a></p>
+        <p class=\"credit\"><strong>Prestation :</strong> Développement front-end</p>"
+  copy: 
+        "<h3>Wordpress, responsive</h3>
+        <p>Morning By Foley a toujours tourné sur une plateforme Wordpress, et Foley souhaitait la conserver. J'ai simplement créé un thème sur-mesure corresspondant aux gabarits fournis par la cliente !</p>
+        <p>L'autre intérêt de ce redesign était d'offrir à Foley un site capable d'être lu confortablement à toutes les tailles d'écrans.</p>"
+  images:
+        - "foley-image2.jpg"
+        - "foley-image1.jpg"
+  type: "- Blog responsive"
+- title: "Cheguei Paris"
   clean: "cheguei"
-  description: "Développement front-end responsive"
+  description: "Cheguei a pour mission de rendre Paris plus accessible aux touristes, étudiants, hommes et femmes d'affaires qui souhaitent s'en rapprocher. Informations et services y sont donc proposés dans un site sobre et épuré."
   goTo: "http://www.chegueiparis.com"
-- title: "Villa Graslin"
-  clean: "villa-graslin"
-  description: "Site responsive pour un projet immobiler Nantais"
-  goTo: "http://www.villa-graslin.fr"
+  credits: 
+        "<p class=\"credit\"><strong>Gestion de projet : </strong> <a href=\"http://www.wrahllc.com\" target=\"_blank\">WRAH LLC</a></p>
+        <p class=\"credit\"><strong>Design : </strong> <a href=\"http://www.lligat.fr/\" target=\"_blank\">Lligat</a></p>
+        <p class=\"credit\"><strong>Prestation :</strong> Développement front-end</p>"
+  copy: 
+        "<h3>Responsive sur mesure</h3>
+        <p>Cheguei Paris est un site responsive pour lequel deux jeux de gabarits m'ont été fournis, l'un pour des écrans de bureau, l'autre pour les écrans mobiles.</p>
+        <p>Respectant en partie les lois du responsive webdesign, ce gabarits posaient parfois de nouveaux défis tant le soucis d'ergonomie et de lisibilité exigeait de changements.</p>
+        <p>J'ai donc pu proposer divers développement spécifiques qui venaient compléter les fonctionnaités standard d'un site responsive.</p>"
+  images:
+        - "cheguei-image1.jpg"
+        - "cheguei-image2.jpg"
+  type: "- Vitrine responsive pour tour operator"
 - title: "Protectas"
   clean: "protectas"
-  description: "Intégration et design responsive pour un site corporate. Basé sur Foundation 3"
+  description: "Pour ce site vitrine d'une petite entreprise, je me suis chargé de l'intégration et du design responsive. Basé sur Foundation 3, le projet devait être réalise rapidement et à moindre frais tout en concervant le logo et les images fournies."
   goTo: "http://www.protectas.eu"
-- title: "SIII"
-  clean: "SIII"
-  description: "Intégration responsive du site d'une agence collaborative"
-  goTo: "http://www.speederlan.eu"
+  credits: 
+        "<p class=\"credit\"><strong>Gestion de projet : </strong> <a href=\"http://www.speederlan.eu\" target=\"_blank\">SIII</a></p>
+        <p class=\"credit\"><strong>Logo, images : </strong> <a href=\"http://www.speederlan.eu/\" target=\"_blank\">SIII</a></p>
+        <p class=\"credit\"><strong>Prestation :</strong> Développement front-end, webdesign responsive, rédaction web</p>"
+  type: "- Site vitrine responsive"
 - title: "MKT News"
   clean: "mkt-news"
-  description: "Newsletter responsive expérimentale pour en agence Rennaise"
+  description: "L'agence Rennaise MKT Lines m'a pris en stage pendant deux mois. J'y ai proposé ce template de newsletter responsive, que je conserve ici à la fois par pure nostalgie, et comme preuve de concept. En effet, au-delà du responsive, cette page utilisait alors les bases du CSS orienté objet."
   goTo: "/MKTNews/"
-- title: "Jen Fu"
-  clean: "jenFu"
-  description: "Développement front-end pour une directrice artistique, à Londres"
-  goTo: "http://www.jenfu.co.uk"
+  credits: 
+        "<p class=\"credit\"><strong>Gestion de projet : </strong> <a href=\"http://www.mktlines.com\" target=\"_blank\">MKT Lines</a></p>
+        <p class=\"credit\"><strong>Prestation :</strong> Développement front-end, webdesign</p>"
 - title: "Light Scream"
   clean: "lightScream"
-  description: "Dévéloppement d'un site billingue, dynamique et avec version mobile pour la compagnie Tamara Gvozdenovic"
+  description: "La compagnie Tamara Gvozdenovic m'a confié le développement du site vitrine de l'un de ses spectacles. Il s'agit d'un site billingue, dynamique et avec une version mobile dédiée. Ce projet représente une approche 'full service' de mes prestations qui est assez rare, mais les efforts de webdesign et d'intégration de l'univers demandé par le projet restent intéressants."
   goTo: "http://www.lightscream.com"
-- title: "Henri Michel"
-  clean: "henri-michel"
-  description: "Intégration du site corporate d'un coiffeur Rennais. Agence MKT Lines, Rennes"
-  goTo: "http://www.henrimichel.fr"
-- title: "Optimiis"
-  clean: "optimiis"
-  description: "Intégration et développement front statique d'un site corporate. Agence MKT Lines, Rennes"
-  goTo: "http://www.optimiis.fr"
-- title: "Arts London News"
-  clean: "ALN"
-  description: "Rédaction web et gestion editoriale du journal de l'université des Arts de Londres"
-  goTo: "http://www.artlondonnews.co.uk"
-- title: "Compagnie Tamara Gvozdenovic"
-  clean: "gvozdenovic"
-  description: "Gestion de la communication et des relations presses pour la compagnie de danse contemporaine Tamara Gvozdenovic"
-  goTo: "http://www.cie-tg.ch"
+  credits: 
+        "<p class=\"credit\"><strong>Prestation :</strong> Gestion de projet, webdesign, développement front et back-end, rédaction web, traduction</p>"

@@ -1,6 +1,6 @@
 ---
-title: <%= locals[:code].title %> - Benoit Rajalu - Développemeur web front-end
-description: "#{locals[:code].description}"
+title: Réalisation Benoit Rajalu, développeur front-end à Nantes / Rennes / Laval
+description: L'un des travaux d'intégration, de développement ou de webdesign réalisé ces dernières années !
 ---
 
 <% p = locals[:code] %>
@@ -10,7 +10,7 @@ description: "#{locals[:code].description}"
 		<div class="large-6 columns">
 			<article class="copy white workIntro mobileFeature">
 				<%= link_to 'Tous les projets', '/references.html', :class => 'return' %>
-				<h2 class="title xxl noMarg"><%= p.title %></h2>
+				<h2 class="title xxl"><%= p.title %></h2>
 				<h3 class="title xs"><%= p.type %></h3>
 				<p><%= p.description %></p>
 				<%= p.credits %>
@@ -22,6 +22,7 @@ description: "#{locals[:code].description}"
 		</div>
 	</div>
 </div>
+<% if p.copy || p.images %>
 <div class="row">
 	<div class="large-4 columns">
 		<article class="copy">
@@ -29,8 +30,11 @@ description: "#{locals[:code].description}"
 		</article>
 	</div>
 	<div class="large-7 large-push-1 columns images">
-		<% p.images.each_with_index do |f, index| %>
-			<%= image_tag 'projects/' + f, :alt => "#{p.title} image #{index + 1}" %>
+		<% if p.images %>
+			<% p.images.each_with_index do |f, index| %>
+				<%= image_tag 'projects/' + f, :alt => "#{p.title} image #{index + 1}" %>
+			<% end %>
 		<% end %>
 	</div>
 </div>
+<% end %>

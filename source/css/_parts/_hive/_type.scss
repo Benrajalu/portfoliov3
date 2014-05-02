@@ -25,6 +25,25 @@
 			background:$green;
 			color:$white;
 		}
+		&.xl{
+			padding:20px 30px;
+			font-size:20px;
+		}
+		&.centered{
+			margin:0 auto;
+			display:block;
+			max-width:80;
+		}
+		&.white{
+			color:$white;
+			border:1px solid $white;
+			&:hover{
+				border:1px solid $green;
+			}
+		}
+		&.mb40{
+			margin-bottom:40px;
+		}
 	}
 
 	img{
@@ -54,6 +73,9 @@
 		&.xl{
 			width:10px;
 			height:10px;
+		}
+		&.left{
+			margin:10px 0px 10px 0px;
 		}
 	}
 
@@ -217,13 +239,30 @@
 				}
 			}
 		}
+
+		&.black{
+			li{
+				a{
+					color:$black;
+					border-bottom:1px dashed $black;
+					&:hover{
+						color:$green;
+						border-bottom:1px solid $green;
+					}
+				}
+			}
+		}
+		@media all and (max-width:780px){
+			text-align:center;
+			padding-top:20px;
+		}
 	}
 
 // Return
 	.return{
 		@include roboto(18px, $white);
 		text-decoration:none;
-		margin-bottom:25px;
+		margin-bottom:15px;
 		position:relative;
 		display:block;
 		padding-left:25px;

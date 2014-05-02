@@ -34,14 +34,14 @@
 
             <nav id="mainNav">
                 <ul>
-                    <li id="logo"><a href="index.html"><span>ben</span> rajalu</a></li>
+                    <li id="logo"><% link_to '/index.html' do %><span>ben</span> rajalu<% end %></li>
                     <li id="homeLink"><%= magic_link_to 'home', '/index.html' %></li>
                     <li class="divider"></li>
                     <li><%= magic_link_to 'services', '/services.html' %></li>
                     <li class="divider"></li>
                     <li><%= magic_link_to 'références', '/references.html' %></li>
                     <li class="divider"></li>
-                    <li><%= magic_link_to 'a propos', '/about.html' %></li>
+                    <li><%= magic_link_to 'a propos', '/a-propos.html' %></li>
                     <li class="divider"></li>
                     <li id="contact"><a href="#" class="offTrigger" data-target="#contactBar">contact</a></li>
                 </ul>

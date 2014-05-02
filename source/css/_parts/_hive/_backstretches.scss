@@ -1,5 +1,8 @@
 // Backstreches
 	.backstretch{
+		.source{
+			display:none;
+		}
 		@include transition(all 300ms);
 		&.main{
 			height:500px;

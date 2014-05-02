@@ -30,6 +30,7 @@
 			height:200px;
 			margin:-100px 0px 0px -100px;
 			line-height:200px;
+			z-index:9;
 			h1{
 				@include roboto(35px, $black);
 				margin:0px;

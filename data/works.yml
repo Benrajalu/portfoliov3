@@ -9,15 +9,15 @@
         <p class=\"credit\"><strong>Prestation :</strong> Intégration</p>"
   copy: 
         "<h3>Drupal</h3>
-        <p>Les choix technologiques étaient en place avant que j'intervienne sur le projet. J'ai donc du me greffer à une architecture Drupal qui m'était alors tout à fait inconnue.</p>
+        <p>Les choix technologiques étaient en place avant que j'intervienne sur le projet. J'ai donc dû me greffer à une architecture Drupal qui m'était alors tout à fait inconnue.</p>
         <p>Une difficulté supplémentaire était d'intégrer une trentaine de gabarits différents dans cet outil qui n'est pas spécialement adapté à un tel étalage de templates...</p>
         <p>Au final, le site fourni tente au maximum de limiter la pléthore de markup non sémantique livré par le CMS et d'offrir via le HTML5 le maximum de sens possible.</p>"
   images:
         - "evolis-image1.png"
-  type: "- Catalogue industriel sous Drupal"
+  type: "- Catalogue industriel"
 - title: "WRAH LLC"
   clean: "wrah"
-  description: "Petite équipe web à géométrie variable, WRAH cherchait un site simple et effiicace pour expliquer son activité. Un design “plat”, un site responsive et une rédaction sur-mesure étaient les seuls paramètres solides du brief."
+  description: "Petite équipe web à géométrie variable, WRAH cherchait un site simple et efficace pour expliquer son activité. Un design “plat”, un site responsive et une rédaction sur-mesure étaient les seuls paramètres solides du brief."
   goTo: "http://www.wrahllc.com"
   credits: 
         "<p class=\"credit\"><strong>Gestion de projet : </strong> <a href=\"http://www.wrahllc.com\" target=\"_blank\">WRAH LLC</a></p>
@@ -60,7 +60,7 @@
         <p class=\"credit\"><strong>Prestation :</strong> Développement front-end</p>"
   copy: 
         "<h3>Pixel perfect</h3>
-        <p>L'un des intérêts principaux de mon travail sur ce site était de reproduire au plus juste les gabarits travaillés et soignés qui m'ont été fournis. Le rendu final respect ce materiel original et trouve sa place sur tous les navigateurs visés !</p>"
+        <p>L'un des intérêts principaux de mon travail sur ce site était de reproduire au plus juste les gabarits travaillés et soignés qui m'ont été fournis. Le rendu final respecte ce materiel original et trouve sa place sur tous les navigateurs visés !</p>"
   images:
         - "bem-image1.jpg"
   type: "- Vitrine de tour operator"
@@ -74,7 +74,7 @@
         <p class=\"credit\"><strong>Prestation :</strong> Développement front-end</p>"
   copy: 
         "<h3>Wordpress, responsive</h3>
-        <p>Morning By Foley a toujours tourné sur une plateforme Wordpress, et Foley souhaitait la conserver. J'ai simplement créé un thème sur-mesure corresspondant aux gabarits fournis par la cliente !</p>
+        <p>Morning By Foley a toujours tourné sur une plateforme Wordpress, et Foley souhaitait la conserver. J'ai simplement créé un thème sur-mesure correspondant aux gabarits fournis par la cliente !</p>
         <p>L'autre intérêt de ce redesign était d'offrir à Foley un site capable d'être lu confortablement à toutes les tailles d'écrans.</p>"
   images:
         - "foley-image2.jpg"
@@ -99,7 +99,7 @@
   type: "- Vitrine responsive pour tour operator"
 - title: "Protectas"
   clean: "protectas"
-  description: "Pour ce site vitrine d'une petite entreprise, je me suis chargé de l'intégration et du design responsive. Basé sur Foundation 3, le projet devait être réalise rapidement et à moindre frais tout en concervant le logo et les images fournies."
+  description: "Pour ce site vitrine d'une petite entreprise, je me suis chargé de l'intégration et du design responsive. Basé sur Foundation 3, le projet devait être réalisé rapidement et à moindre frais tout en conservant le logo et les images fournies."
   goTo: "http://www.protectas.eu"
   credits: 
         "<p class=\"credit\"><strong>Gestion de projet : </strong> <a href=\"http://www.speederlan.eu\" target=\"_blank\">SIII</a></p>

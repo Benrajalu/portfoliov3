@@ -52,6 +52,11 @@ if (!(window.console && console.log)) {
 		}
 	}
 
+// Backstreches
+	$(".backstretch").each(function(){
+		$(this).find(".source").hide();
+	})
+
 $(window).load(function () {
 	// Parsley
 		$.listen('parsley:field:validate', function () {
@@ -69,7 +74,6 @@ $(window).load(function () {
 
 	// Backstretch
 		$(".backstretch").each(function(){
-			$(this).find(".source").hide();
 			var src = $(this).find(".source").attr("src");
 			$(this).backstretch(src);
 		})

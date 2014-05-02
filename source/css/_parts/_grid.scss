@@ -1,0 +1,214 @@
+body, html{
+	background:$white;
+}
+.row{
+	width:100%;
+	max-width:1200px;
+	position:relative;
+	@include clearfix();
+	margin:0 auto;
+	&.pad70{
+		padding:70px 0px;
+	}
+	&.table-large{
+		display:table;
+		.columns{
+			display:table-cell;
+			vertical-align: middle;
+			float:none;
+		}
+		@media all and (max-width: 780px){
+			display:block;
+			.columns{
+				display:block;
+			}
+		}
+	}
+	&.table-medium{
+		display:table;
+		.columns{
+			display:table-cell;
+			vertical-align: middle;
+			float:none;
+		}
+		@media all and (max-width: 550px){
+			display:block;
+			.columns{
+				display:block;
+			}
+		}
+	}
+	&.table-small{
+		display:table;
+		.columns{
+			display:table-cell;
+			vertical-align: middle;
+			float:none;
+		}
+	}
+}
+
+.rowFluid{
+	width:100%;
+	@include clearfix;
+	position:relative;
+	padding:70px 0px;
+	&.gray{
+		background:#eaeaea;
+	}
+	&.green{
+		background:$darkGreen;
+	}
+	&.paleGreen{
+		background:$paleGreen;
+	}
+	&.black{
+		background:$black;
+	}
+	&.pad40{
+		padding:20px 0px 40px 0px;
+	}
+	&.mar60{
+		margin-bottom:60px;
+	}
+}
+
+.columns{
+	float:left;
+	display:block;
+	padding:0 20px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	&.paleGreen{
+		background:$paleGreen;
+	}
+	&.images{
+		img{
+			margin-bottom:20px;
+			&:last-child{
+				margin-bottom:0px;
+			}
+		}
+	}
+
+	@for $i from 1 through 12{
+		&.small-#{$i}{
+			width:(100%/12) * $i;	
+		}
+	}
+
+	@for $i from 1 through 12{
+		&.medium-#{$i}{
+			width:(100%/12) * $i;	
+		}
+	}
+
+	@for $i from 1 through 12{
+		&.large-#{$i}{
+			width:(100%/12) * $i;	
+		}
+	}
+
+	@for $i from 1 through 12{
+		&.large-pull-#{$i}{
+			position:relative;
+			left:-(100%/12) * $i;
+		}
+	}
+	@for $i from 1 through 12{
+		&.large-push-#{$i}{
+			position:relative;
+			left:(100%/12) * $i;
+		}
+	}
+	@for $i from 1 through 12{
+		&.medium-pull-#{$i}{
+			position:relative;
+			left:-(100%/12) * $i;
+		}
+	}
+	@for $i from 1 through 12{
+		&.medium-push-#{$i}{
+			position:relative;
+			left:(100%/12) * $i;
+		}
+	}
+	@for $i from 1 through 12{
+		&.small-pull-#{$i}{
+			position:relative;
+			left:-(100%/12) * $i;
+		}
+	}
+	@for $i from 1 through 12{
+		&.small-push-#{$i}{
+			position:relative;
+			left:(100%/12) * $i;
+		}
+	}
+
+	&.centered{
+		float:none !important;
+		margin:0 auto;
+		position:relative;
+	}
+
+
+	@media all and (max-width: 780px){
+		&[class^=large-]{
+			width:100%;
+		}
+		@for $i from 1 through 12{
+			&.large-pull-#{$i}{
+				position:static;
+				left:auto;
+			}
+		}
+		@for $i from 1 through 12{
+			&.large-push-#{$i}{
+				position:static;
+				left:auto;
+			}
+		}
+		@for $i from 1 through 12{
+			&.small-#{$i}{
+				width:(100%/12) * $i;	
+			}
+		}
+
+		@for $i from 1 through 12{
+			&.medium-#{$i}{
+				width:(100%/12) * $i;	
+			}
+		}
+
+	}
+	@media all and (max-width: 550px){
+		&[class^=large-]{
+			width:100%;
+		}
+
+		&[class^=medium-]{
+			width:100%;
+		}
+
+		@for $i from 1 through 12{
+			&.medium-pull-#{$i}{
+				position:static;
+				left:auto;
+			}
+		}
+		@for $i from 1 through 12{
+			&.medium-push-#{$i}{
+				position:static;
+				left:auto;
+			}
+		}
+		@for $i from 1 through 12{
+			&.small-#{$i}{
+				width:(100%/12) * $i;	
+			}
+		}
+
+	}
+}

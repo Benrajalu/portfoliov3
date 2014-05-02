@@ -1,0 +1,85 @@
+---
+title: Références - Développeur web front-end à Nantes / Rennes / Laval
+description: Portfolio de Benoit Rajalu, développeur web front-end. Retrouvez les projets que j'ai réalisé ou auxquels j'ai participé !
+---
+
+<div class="rowFluid backstretch secondary">
+	<%= image_tag 'workBG.jpg', :alt => "backstretch", :class => 'source' %>
+	<div class="titleDisc ml">
+		<hgroup class="contents">
+			<h1>Références</h1>
+			<h2>Travaux, publics !</h2>
+		</hgroup>
+	</div>
+</div>
+
+
+<div class="row vertHolder">
+	<div class="large-4 medium-6 columns vParent">
+	  	<article class="intro xs vChild">
+	  		    <div class="centerPiece">
+	  		        <h2>Featured</h2>
+	  		        <p>Une sélection des dernières livraisons, ou de celles que j'aime montrer.</p>
+	  		    </div>
+	  		    <div class="plus"></div>
+	  	</article>
+	</div>
+	<% data.works.each_with_index do |f, index| %>
+		<%	if index < 5 %>
+			<div class="large-4 medium-6 columns">
+			  	<article class="work vSizer">
+			  		    <div class="centerPiece">
+			  		        <div class="centralDisc">
+			  		        	<% link_to '/references/' + f["clean"] + '.html' do %>
+			  		        		<%= image_tag 'projects/' + f["clean"] + '-logo.png', :alt => f["title"] %>
+			  		        	<% end %>
+			  		        </div>
+			  		        <%= link_to '', '/references/' + f["clean"] + '.html', :class => 'left smallDisc' %>
+			  		        <a href="<%= f["goTo"] %>" target="_blank" class="right smallDisc"></a>
+			  		    </div>
+			  		    <div class="illus">
+			  		    	<% link_to '/references/' + f["clean"] + '.html' do %>
+			  		    		<%= image_tag 'projects/' + f["clean"] + '-back.jpg', :alt => f["description"] %>
+			  		    	<% end %>
+			  		    </div>
+			  	</article>
+			</div>
+		<% end %>
+	<% end %>
+</div>
+<div class="rowFluid">
+	<div class="row">
+		<div class="large-7 columns large-push-5 columns">
+			<article class="intro xl">
+				    <div class="centerPiece">
+				        <h2>Votre projet</h2>
+				        <p>Ajoutons à cette liste un projet dont nous pouvons être fiers !</p>
+				        <a class="button offTrigger" data-target="#contactBar" href="#">Contactez-moi</a>
+				    </div>
+				    <div class="plus"></div>
+			</article>
+		</div>
+	</div>
+</div>
+
+<div class="rowFluid black">
+	<div class="row table-large">
+		<div class="large-5 columns">
+			<article class="copy mobileFeature white">
+				<h2 class="title xxl noMarg">Archives</h2>
+				<p>Quelques projets en plus, moins récents mais qui valent encore le coup d'oeil. Si vous en voulez plus, faites-moi signe !</p>
+			</article>
+		</div>
+		<div class="large-7 columns">
+			<ul class="archiveList">
+				<% data.works.each_with_index do |f, index| %>
+					<%	if index >= 5 %>
+						<li>
+							<%= link_to f["title"], '/references/' + f["clean"] + '.html' %>
+						</li>
+					<% end %>
+				<% end %>
+			</ul>
+		</div>
+	</div>
+</div>

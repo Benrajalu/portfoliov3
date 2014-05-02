@@ -7,7 +7,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <!-- Use title if it's in the page YAML frontmatter -->
-        <title><%= current_page.data.title || "Benoit Rajalu" %></title>
+        <title><%= current_page.data.title || "Benoit Rajalu - Développeur web front-end à Nantes / Rennes / Laval" %></title>
         <meta name="description" content="<%= current_page.data.description || "Portfolio de Benoit Rajalu" %>">
         <meta name="viewport" content="width=device-width">
 
@@ -23,8 +23,8 @@
         <meta property="og:url" content="http://benrajalu.net/" /> <!-- Complete with actual link to the page -->
         <meta property="og:description" content="<%= current_page.data.description || "Portfolio de Benoit Rajalu" %>" /> <!-- Short description of the linked page's content -->
 
-        <link rel="stylesheet" href="css/global.css">
-        <script src="js/vendor/modernizr-2.6.1.min.js"></script>
+        <%= stylesheet_link_tag 'global.css' %>
+        <%= javascript_include_tag 'vendor/modernizr-2.6.1.min.js' %>
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -34,14 +34,14 @@
 
             <nav id="mainNav">
                 <ul>
-                    <li id="logo"><a href="index.html"><span>ben</span> rajalu</a></li>
-                    <li id="homeLink"><%= magic_link_to 'home', 'index.html' %></li>
+                    <li id="logo"><% link_to '/index.html' do %><span>ben</span> rajalu<% end %></li>
+                    <li id="homeLink"><%= magic_link_to 'home', '/index.html' %></li>
                     <li class="divider"></li>
-                    <li><%= magic_link_to 'services', 'services.html' %></li>
+                    <li><%= magic_link_to 'services', '/services.html' %></li>
                     <li class="divider"></li>
-                    <li><%= magic_link_to 'références', 'references.html' %></li>
+                    <li><%= magic_link_to 'références', '/references.html' %></li>
                     <li class="divider"></li>
-                    <li><%= magic_link_to 'a propos', 'about.html' %></li>
+                    <li><%= magic_link_to 'a propos', '/a-propos.html' %></li>
                     <li class="divider"></li>
                     <li id="contact"><a href="#" class="offTrigger" data-target="#contactBar">contact</a></li>
                 </ul>
@@ -83,10 +83,11 @@
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.0.min.js"><\/script>')</script>
 
-        <script src="js/TweenMax.min.js"></script>
-        <script src="js/parsley.min.js"></script>
-        <script src="js/offCanvas.js"></script>
-        <script src="js/plugins.js"></script>
+        <%= javascript_include_tag 'TweenMax.min.js' %>
+        <%= javascript_include_tag 'jquery.backstretch.min.js' %>
+        <%= javascript_include_tag 'parsley.min.js' %>
+        <%= javascript_include_tag 'offCanvas.js' %>
+        <%= javascript_include_tag 'plugins.js' %>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>

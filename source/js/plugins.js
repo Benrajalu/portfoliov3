@@ -11,8 +11,53 @@ if (!(window.console && console.log)) {
     }());
 }
 
+// Parsley 
+	var validateFront = function () {
+	  if (true === $('#contactForm').parsley().isValid()) {
+	    $('#feedback').addClass('hidden').html("");
+	  } else {
+	    $('#feedback').removeClass('hidden').html("Tous les champs sont obligatoires, et votre adresse email doit être valide...");
+	  }
+	};
 
-$(document).ready(function () {
+	var sendMessage = function(){
+		if (true === $('#contactForm').parsley().isValid()) {
+			event.preventDefault();
+			$("#contactForm").find("#submit").attr("value", "Envoi en cours...").attr("disabled", "disabled");
+			$.ajax({
+			  type: "POST",
+			  url: "send.php",
+			  data: $("#contactForm").serialize(),
+			  success: function() {
+			    $('#feedback').addClass("success").html("Message reçu");
+			    $("#contactForm").find("#submit").attr("value", "Nouvel envoi").removeAttr("disabled");
+			  }, 
+			  error: function() {
+			  	$('#feedback').removeClass("success").html("Oups, soucis de script. Merci de me joindre via email !");
+			  }
+			});
+			return false;
+		} else {
+		  $('#feedback').removeClass('success').html("Tous les champs sont obligatoires, et votre adresse email doit être valide...");
+		}
+	}
+
+// Vertical align
+	var verticalAlign = function(){
+		if(Modernizr.mq('only all and (min-width: 781px)')){
+			$(".vertHolder").each(function(){
+				var h = $(this).find(".vSizer").outerHeight() + "px";
+				$(this).find(".vParent").css({"line-height": h, "height" : h});
+			})
+		}
+	}
+
+// Backstreches
+	$(".backstretch").each(function(){
+		$(this).find(".source").hide();
+	})
+
+$(window).load(function () {
 	// Parsley
 		$.listen('parsley:field:validate', function () {
 			validateFront();
@@ -27,36 +72,42 @@ $(document).ready(function () {
 		  validateFront();
 		});
 
-		var validateFront = function () {
-		  if (true === $('#contactForm').parsley().isValid()) {
-		    $('#feedback').addClass('hidden').html("");
-		  } else {
-		    $('#feedback').removeClass('hidden').html("Tous les champs sont obligatoires, et votre adresse email doit être valide...");
-		  }
-		};
+	// Backstretch
+		$(".backstretch").each(function(){
+			var src = $(this).find(".source").attr("src");
+			$(this).backstretch(src);
+		})
 
-		var sendMessage = function(){
-			if (true === $('#contactForm').parsley().isValid()) {
-				event.preventDefault();
-				$("#contactForm").find("#submit").attr("value", "Envoi en cours...").attr("disabled", "disabled");
-				$.ajax({
-				  type: "POST",
-				  url: "send.php",
-				  data: $("#contactForm").serialize(),
-				  success: function() {
-				    $('#feedback').addClass("success").html("Message reçu");
-				    $("#contactForm").find("#submit").attr("value", "Nouvel envoi").removeAttr("disabled");
-				  }, 
-				  error: function() {
-				  	$('#feedback').removeClass("success").html("Oups, soucis de script. Merci de me joindre via email !");
-				  }
-				});
-				return false;
-			} else {
-			  $('#feedback').removeClass('success').html("Tous les champs sont obligatoires, et votre adresse email doit être valide...");
-			}
-		}
+	// Vertical align
+		verticalAlign();
+		$(window).resize(function(){
+			verticalAlign();
+		})
+
+	// Work
+		$(".work").each(function(){
+		    var lefty = $(this).find(".smallDisc.left");
+		    var righty = $(this).find(".smallDisc.right");
+		    
+		    var tl = new TimelineLite();
+		    tl.pause();
+		    tl.to(lefty,0.2,{left:-55,zIndex:1, ease:Back.easeOut});
+		    tl.to(lefty,0.2,{left:-5, zIndex:4});
+		    
+		    var tr = new TimelineLite();
+		    tr.pause();
+		    tr.to(righty,0.2,{right:-55,zIndex:1, ease:Back.easeOut});
+		    tr.to(righty,0.2,{right:-5, zIndex:4});
+		   
+		    $(this).hover(function(){
+		        tl.play();
+		        tr.play();
+		    },function(){
+		        tl.reverse();
+		        tr.reverse();
+		    });
+		});
+
+	// Place any jQuery/helper plugins in here.
+		$("#contactBar").offCanvas();
 });
-
-// Place any jQuery/helper plugins in here.
-$("#contactBar").offCanvas();

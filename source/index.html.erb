@@ -1,5 +1,107 @@
 ---
-title: HTML5 Boilerplate Middleman
+title: Benoit Rajalu - Développeur front-end à Nantes / Rennes / Laval
+description: Développement front-end et intégration web en freelance. J'apprécie surtout les sites responsive, mais je suis à votre écoute quel que soit le projet. Je me déplace facilement à Nantes, Rennes, Laval et Paris.
 ---
 
-<!-- Add your site or application content here -->
+<div class="rowFluid backstretch main" >
+	<%= image_tag 'testImage.jpg', :alt => "backstretch", :class => 'source' %>
+	<div class="titleDisc xl">
+		<hgroup class="contents">
+			<h1>Benoit Rajalu</h1>
+			<h2>Front-end developper | UI/UX designer</h2>
+		</hgroup>
+	</div>
+</div>
+
+<div class="row pad70">
+	<div class="large-8 columns centered">
+		<article class="intro">
+			<h2 class="sectionTitle xl">Hello !</h2>
+			<hr class="separate xl"/>
+			<p>Je suis un développeur front-end et webdesigner freelance passionné par le responsive webdesign et jQuery. J'aime aussi le sucre, la photo et les phrases courtes.<p>
+
+			<p>J’ai travaillé sur <%= link_to 'divers projets', '/references.html' %> en freelance ou en agence. Coté code, j’affectionne les choses lisibles et robustes, ce qui explique peut-être ma préférence pour le design propre et épuré.</p>
+
+			<p>Si travailler avec moi vous tente, je suis actuellement à votre écoute. <br/>N’hésitez pas à me passer un <a href="#" class="offTrigger" data-target="#contactBar">petit coucou.</a></p>
+		</article>
+	</div>
+</div>
+
+
+<div class="rowFluid gray">
+	<div class="row">
+		<h2 class="sectionTitle">Services</h2>
+		<hr class="separate xs" />
+		<div class="medium-4 columns">
+			<article class="skillBox">
+				<h2 class="title"><span>UI/UX</span></h2>
+				<ul>
+					<li>Zonings</li>
+					<li>Wireframes</li>
+					<li>Storyboards</li>
+					<li>Design d'interaction</li>
+				</ul>
+				<%= link_to 'En savoir plus', '/services.html', :class => 'button' %>
+			</article>
+		</div>
+
+		<div class="medium-4 columns">
+			<article class="skillBox">
+				<h2 class="title"><span>Design</span></h2>
+				<ul>
+					<li>Flat design</li>
+					<li>Maquettes .psd</li>
+					<li>Intégration de chartre</li>
+					<li>Déclinaisons</li>
+				</ul>
+				<%= link_to 'En savoir plus', '/services.html', :class => 'button' %>
+			</article>
+		</div>
+
+		<div class="medium-4 columns">
+			<article class="skillBox">
+				<h2 class="title"><span>Code</span></h2>
+				<ul>
+					<li>HTML5 / TWIG</li>
+					<li>CSS3 (SASS)</li>
+					<li>jQuery / JS</li>
+					<li>Responsive design</li>
+				</ul>
+				<%= link_to 'En savoir plus', '/services.html', :class => 'button' %>
+			</article>
+		</div>
+	</div>
+</div>
+
+<div class="row pad70 vertHolder">
+	<h2 class="sectionTitle">Références</h2>
+	<hr class="separate xs"/>
+	<div class="large-6 columns vParent">
+		<article class="copy mobileFeature vChild">
+			<h3 class="title xs">Featured:</h3>
+			<h2 class="title xxl">WRAH LLC</h2>
+			<p>Petite équipe web à géométrie variable, WRAH cherchait un site simple et efficace pour expliquer son activité. Un design “plat”, un site responsive et une rédaction sur-mesure étaient les seuls paramètres solides du brief.</p>
+			<%= link_to 'En savoir plus', '/references/wrah.html', :class => 'button' %>
+			<%= link_to 'Toutes mes références', '/references.html', :class => 'button' %>
+		</article>
+	</div>
+	<div class="large-6 columns">
+		<% link_to '/references/wrah.html' do %>
+			<%= image_tag 'homeFeature.png', :alt => "WRAH LLC", :class=> 'featured vSizer' %>
+		<% end %>
+	</div>
+</div>
+
+<div class="rowFluid black">
+	<div class="row">
+		<div class="large-8 columns centered">
+			<article class="intro white">
+				<h2 class="sectionTitle">A propos</h2>
+				<hr class="separate xs"/>
+				<p>Mes compétences techniques reposent sur le mélange HTML5 - CSS3 - jQuery. J’ai aussi glâné au fil des expériences des compétences en rédaction et en webdesign.</p>
+				<p>Pour un profil plus complet, <%= link_to 'consultez mon CV !', '/a-propos.html' %></p>
+				<%= link_to 'A propos', '/a-propos.html', :class => 'button' %>
+			</article>
+		</div>
+	</div>
+</div>

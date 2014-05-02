@@ -52,8 +52,6 @@ $.fn.offCanvas = function(){
         	})
         })
 
-
-
         $.fn.offCanvas = function(methodOrOptions) {
             if ( methods[methodOrOptions] ) {
                 return methods[ methodOrOptions ].apply( this, Array.prototype.slice.call( arguments, 1 ));

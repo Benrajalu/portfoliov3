@@ -1,0 +1,332 @@
+// Global type styles
+	ul{
+		li{
+			font-family:$mainFont;
+		}
+	}
+	p, p a{
+		font-family:$mainFont;
+	}
+
+	a.button{
+		@include inline-block;
+		border:1px solid $green;
+		padding:10px 15px;
+		text-align:center;
+		@include roboto(12px, $black);
+		text-decoration:none;
+		text-transform:uppercase;
+		margin-bottom:5px;
+		@include transition(all 300ms);
+		position:relative;
+		overflow:hidden;
+		z-index:1;
+		&:hover{
+			background:$green;
+			color:$white;
+		}
+		&.xl{
+			padding:20px 30px;
+			font-size:20px;
+		}
+		&.centered{
+			margin:0 auto;
+			display:block;
+			max-width:80;
+		}
+		&.white{
+			color:$white;
+			border:1px solid $white;
+			&:hover{
+				border:1px solid $green;
+			}
+		}
+		&.mb40{
+			margin-bottom:40px;
+		}
+	}
+
+	img{
+		width:100%;
+		display:block;
+	}
+
+// Titles
+
+	.sectionTitle{
+		@include roboto(30px, $darkGreen);
+		text-align:center;
+		&.xl{
+			font-size:40px;
+		}
+	}
+	.separate{
+		display:block;
+		border:0px;
+		background:$darkGreen;
+		@include border-radius(999px);
+		margin:10px auto 30px auto;
+		&.xs{
+			width:5px;
+			height:5px;
+		}
+		&.xl{
+			width:10px;
+			height:10px;
+		}
+		&.left{
+			margin:10px 0px 10px 0px;
+		}
+	}
+
+// Intro copy
+	.intro{
+		text-align:center;
+		p{
+			@include roboto(16px, $black);
+			margin-bottom:20px;
+			line-height:25px;
+			&:last-child{
+				margin-bottom:0px;
+			}
+			a{
+				color:$darkGreen;
+				text-decoration: none;
+				border-bottom:1px dashed $green;
+				@include transition(all 300ms);
+				&:hover, &:active{
+					color:$black;
+					border-bottom:1px solid $black;
+				}
+			}
+		}
+		&.white{
+			p{
+				color:$white;
+				a{
+					&:hover{
+						color:$white;
+						border-bottom:1px solid $white;
+					}
+				}
+			}
+			.button{
+				color:$white;
+			}
+		}
+		&.xs{
+			text-align:right;
+			display:block;
+			position:relative;
+			@include inline-block;
+			margin-bottom:20px;
+			h2{
+				@include roboto(23px, $green);
+			}
+			p{
+				@include roboto(16px, $black);
+			}
+			.centerPiece{
+				@include inline-block;
+				padding-right:90px;
+				line-height:1;
+			}
+			.plus{
+				width:70px;
+				height:70px;
+				text-align:center;
+				line-height:70px;
+				font-size:20px;
+				font-family: 'icomoon';
+				color:$white;
+				background:$paleGreen;
+				@include border-radius(999px);
+				position:absolute;
+				top:50%;
+				right:0px;
+				margin-top:-35px;
+			}
+			@media all and (max-width: 780px){
+				.centerPiece{
+					padding:80px 90px 0px 0px;
+				}
+				.plus{
+					right:0px;
+					margin:0px;
+				}
+			}
+			@media all and (max-width: 550px){
+				.centerPiece{
+					padding:0px 0px 0px 90px;
+					text-align:left;
+				}
+				.plus{
+					right:auto;
+					left:0px;
+					margin-top:-30px;
+				}
+			}
+		}
+		&.xl{
+			text-align:left;
+			display:block;
+			position:relative;
+			@include inline-block;
+			margin-bottom:20px;
+			h2{
+				@include roboto(23px, $green);
+			}
+			p{
+				@include roboto(16px, $black);
+			}
+			.centerPiece{
+				@include inline-block;
+				padding-right:90px;
+				padding-left:150px;
+				line-height:1;
+			}
+			.plus{
+				width:120px;
+				height:120px;
+				text-align:center;
+				line-height:120px;
+				font-size:60px;
+				font-family: 'icomoon';
+				color:$white;
+				background:$paleGreen;
+				@include border-radius(999px);
+				position:absolute;
+				top:50%;
+				left:15px;
+				margin-top:-60px;
+			}
+			@media all and (max-width: 780px){
+				display:block;
+				.centerPiece{
+					display:block;
+					padding:140px 20px 0px 20px;
+					text-align:center;
+				}
+				.plus{
+					left:50%;
+					top:0px;
+					margin:0px 0px 0 -60px;
+				}
+			}
+		}
+	}
+
+// Archive list
+	.archiveList{
+		margin:0px;
+		li{
+			@include inline-block;
+			padding:0 15px;
+			border-right:1px solid $green;
+			line-height:25px;
+			margin-bottom:5px;
+			&:last-child{
+				border-right:0px;
+			}
+			a{
+				@include roboto(16px, $white);
+				border-bottom:1px dashed $white;
+				text-decoration:none;
+				@include transition(all 300ms);
+				&:hover{
+					border-bottom:1px solid $green;
+					color:$green;
+				}
+			}
+		}
+
+		&.black{
+			li{
+				a{
+					color:$black;
+					border-bottom:1px dashed $black;
+					&:hover{
+						color:$green;
+						border-bottom:1px solid $green;
+					}
+				}
+			}
+		}
+		@media all and (max-width:780px){
+			text-align:center;
+			padding-top:20px;
+		}
+	}
+
+// Return
+	.return{
+		@include roboto(18px, $white);
+		text-decoration:none;
+		margin-bottom:15px;
+		position:relative;
+		display:block;
+		padding-left:25px;
+		@include transition(all 300ms);
+		&:before{
+			content:"";
+			width:20px;
+			height:20px;
+			display:block;
+			background:$white url("../img/return.png") center center no-repeat;
+			line-height:20px;
+			text-align:center;
+			color:$green;
+			@include border-radius(9999px);
+			position:absolute;
+			left:0px;
+			top:50%;
+			margin-top:-10px;
+			@include transition(all 300ms);
+		}
+		&:hover{
+			color:$black;
+			&:before{
+				background-color:$black;
+			}
+		}
+	}
+
+// Project list
+	.projectList{
+		display:block;
+		dd, dt{
+			display:inline-block;
+			vertical-align: top;
+			margin:0 5px 10px 0px;
+			span{
+				display:block;
+				margin-bottom:5px;
+			}
+		}
+		dt{
+			background:$green;
+			@include roboto(13px, $white);
+			padding:0px 10px;
+			line-height:17px;
+			@include border-radius(2px);
+			&:before{
+				display:block;
+				content:" ";
+			}
+		}
+		dd{
+			@include roboto(13px, $black);
+			margin-right:15px;
+			a{
+				color:$black;
+				border-bottom:1px dashed $black;
+				text-decoration: none;
+				@include transition(all 300ms);
+				&:hover{
+					color:$green;
+					border-bottom:1px solid $green;
+				}
+			}
+		}
+	}
+

@@ -69,7 +69,7 @@
                     </ul>
                 </article>
 
-                <% form_tag '/send.php', :id => 'contactForm', :class => 'form', :'data-parsley-validate' =>'',  :'dataParsley-errors-messages-disabled' => '' do %>
+                <% form_tag '/send.php', :id => 'contactForm', :class => 'form', :'data-parsley-validate' =>'',  :'dataParsley-errors-messages-disabled' => '', :method => 'send' do %>
                     <h2>Un petit mot ?</h2>
                     <input type="text" id="name" name="name" placeholder="Votre nom" required/>
                     <input type="email" id="email" name="email" placeholder="Votre email" required/>

@@ -27,7 +27,7 @@ if (!(window.console && console.log)) {
 			var sendTo = $("#contactForm").attr("action");
 			console.log(sendTo);
 			$.ajax({
-			  type: "GET",
+			  type: "POST",
 			  url: sendTo,
 			  data: $("#contactForm").serialize(),
 			  success: function() {

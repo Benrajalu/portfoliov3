@@ -25,7 +25,6 @@ if (!(window.console && console.log)) {
 			event.preventDefault();
 			$("#contactForm").find("#submit").attr("value", "Envoi en cours...").attr("disabled", "disabled");
 			var sendTo = $("#contactForm").attr("action");
-			console.log(sendTo);
 			$.ajax({
 			  type: "POST",
 			  url: sendTo,

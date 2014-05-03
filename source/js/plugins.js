@@ -24,9 +24,11 @@ if (!(window.console && console.log)) {
 		if (true === $('#contactForm').parsley().isValid()) {
 			event.preventDefault();
 			$("#contactForm").find("#submit").attr("value", "Envoi en cours...").attr("disabled", "disabled");
+			var sendTo = $("#contactForm").attr("action");
+			console.log(sendTo);
 			$.ajax({
 			  type: "POST",
-			  url: "send.php",
+			  url: sendTo,
 			  data: $("#contactForm").serialize(),
 			  success: function() {
 			    $('#feedback').addClass("success").html("Message reçu");

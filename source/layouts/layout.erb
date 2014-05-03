@@ -41,7 +41,7 @@
                     <li class="divider"></li>
                     <li><%= magic_link_to 'références', '/references.html' %></li>
                     <li class="divider"></li>
-                    <li><%= magic_link_to 'a propos', '/a-propos.html' %></li>
+                    <li><%= magic_link_to 'à propos', '/a-propos.html' %></li>
                     <li class="divider"></li>
                     <li id="contact"><a href="#" class="offTrigger" data-target="#contactBar">contact</a></li>
                 </ul>
@@ -69,14 +69,14 @@
                     </ul>
                 </article>
 
-                <form id="contactForm" class="form" data-parsley-validate data-parsley-errors-messages-disabled>
+                <% form_tag '/send.php', :id => 'contactForm', :class => 'form', :'data-parsley-validate' =>'',  :'dataParsley-errors-messages-disabled' => '' do %>
                     <h2>Un petit mot ?</h2>
                     <input type="text" id="name" name="name" placeholder="Votre nom" required/>
                     <input type="email" id="email" name="email" placeholder="Votre email" required/>
                     <textarea id="message" name="message" placeholder="Votre message" required></textarea>
                     <p id="feedback"></p>
                     <input type="submit" id="submit" value="OK" />
-                </form>
+                <% end %>
             </div>
         </aside>
 

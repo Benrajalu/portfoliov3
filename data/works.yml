@@ -11,7 +11,7 @@
         "<h3>Drupal</h3>
         <p>Les choix technologiques étaient en place avant que j'intervienne sur le projet. J'ai donc dû me greffer à une architecture Drupal qui m'était alors tout à fait inconnue.</p>
         <p>Une difficulté supplémentaire était d'intégrer une trentaine de gabarits différents dans cet outil qui n'est pas spécialement adapté à un tel étalage de templates...</p>
-        <p>Au final, le site fourni tente au maximum de limiter la pléthore de markup non sémantique livré par le CMS et d'offrir via le HTML5 le maximum de sens possible.</p>"
+        <p>Au final, le site fourni tente au maximum de limiter le markup non sémantique livré par le CMS et d'offrir via le HTML5 le maximum de sens possible.</p>"
   images:
         - "evolis-image1.png"
   type: "- Catalogue industriel"
@@ -45,7 +45,7 @@
         "<h3>Sur-mesure</h3>
         <p>Gladys fonctionne avec une profusion de plugins sur-mesure en jQuery, presque tous relatifs à la taille de l'écran utilisé. J'ai pu développer un compteur de tags dynamiques, un menu dynamique contextuel, une gestion poussée des animations etc...</p>
         <h3>Modularité</h3>
-        <p>Une autre proposition de travail était d'utiliser une ruche : une page de test, visible ici, et contenant tous les blocs html et leurs styles écris en SASS. Ces blocs sont ceux qui seront utilisés sur le site.</p> 
+        <p>Une autre proposition de travail était d'utiliser une ruche : une page de test, visible ici, et contenant tous les blocs html et leurs styles écrits en SASS. Ces blocs sont ceux qui seront utilisés sur le site.</p> 
         <p>Cette technique permet de simplifier considérablement les tests de compatibilité navigateurs, tout en permettant au chef de projet de construire lui-même des templates par de simples copiés-collés.</p>"
   images:
         - "gladys-image1.jpg"
@@ -60,13 +60,13 @@
         <p class=\"credit\"><strong>Prestation :</strong> Développement front-end</p>"
   copy: 
         "<h3>Pixel perfect</h3>
-        <p>L'un des intérêts principaux de mon travail sur ce site était de reproduire au plus juste les gabarits travaillés et soignés qui m'ont été fournis. Le rendu final respecte ce materiel original et trouve sa place sur tous les navigateurs visés !</p>"
+        <p>L'un des intérêts principaux de mon travail sur ce site était de reproduire au plus juste les gabarits travaillés et soignés qui m'ont été fournis. Le rendu final respecte ce matériel original et trouve sa place sur tous les navigateurs visés !</p>"
   images:
         - "bem-image1.jpg"
   type: "- Vitrine de tour operator"
 - title: "Morning by Foley"
   clean: "foley"
-  description: "Foley blogue, elle blogue même beaucoup et joliement. Lassée du design de son site, elle a demandé à WRAH d'intégrer et de développer un site wordpress autour d'une nouvelle identité visuelle"
+  description: "Foley blogue, elle blogue même beaucoup et joliment. Lassée du design de son site, elle a demandé à WRAH d'intégrer et de développer un site wordpress autour d'une nouvelle identité visuelle"
   goTo: "http://morning-by-foley.com/"
   credits: 
         "<p class=\"credit\"><strong>Gestion de projet : </strong> <a href=\"http://www.wrahllc.com\" target=\"_blank\">WRAH LLC</a></p>
@@ -91,8 +91,8 @@
   copy: 
         "<h3>Responsive sur mesure</h3>
         <p>Cheguei Paris est un site responsive pour lequel deux jeux de gabarits m'ont été fournis, l'un pour des écrans de bureau, l'autre pour les écrans mobiles.</p>
-        <p>Respectant en partie les lois du responsive webdesign, ce gabarits posaient parfois de nouveaux défis tant le soucis d'ergonomie et de lisibilité exigeait de changements.</p>
-        <p>J'ai donc pu proposer divers développement spécifiques qui venaient compléter les fonctionnaités standard d'un site responsive.</p>"
+        <p>Respectant en partie les lois du responsive webdesign, ces gabarits posaient parfois de nouveaux défis tant le soucis d'ergonomie et de lisibilité exigeait de changements.</p>
+        <p>J'ai donc pu proposer divers développements spécifiques qui venaient compléter les fonctionnalités standard d'un site responsive.</p>"
   images:
         - "cheguei-image1.jpg"
         - "cheguei-image2.jpg"

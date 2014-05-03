@@ -54,6 +54,9 @@
 		h2{
 			@include roboto(50px, $green);
 			margin-bottom:20px;
+			@media all and (max-width: 550px){
+				font-size:40px;
+			}
 			.dot{
 				padding-right:20px;
 				position:relative;
@@ -94,6 +97,9 @@
 					}
 					&.xxl{
 						font-size:60px;
+						@media all and (max-width: 550px){
+							font-size:40px;
+						}
 					}
 				}
 				&.noMarg{
@@ -118,6 +124,9 @@
 				}
 				&.xxl{
 					font-size:60px;
+					@media all and (max-width: 550px){
+						font-size:40px;
+					}
 				}
 			}
 			&.noMarg{
@@ -128,7 +137,7 @@
 		@media all and (max-width: 780px){
 			&.mobileFeature{
 				display:block;
-				width:80%;
+				width:90%;
 				margin: 0 auto;
 			}
 		}

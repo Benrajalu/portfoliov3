@@ -28,11 +28,15 @@
 		&.xl{
 			padding:20px 30px;
 			font-size:20px;
+			&.mx300{
+				margin:30px auto 0px auto;
+				max-width:300px;
+			}
 		}
 		&.centered{
 			margin:0 auto;
 			display:block;
-			max-width:80;
+			max-width:80%;
 		}
 		&.white{
 			color:$white;

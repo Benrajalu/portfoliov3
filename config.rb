@@ -53,7 +53,7 @@ set :js_dir, 'js'
 
 set :images_dir, 'img'
 
-set :relative_links, true
+ #set :relative_links, true
 
 # Build-specific configuration
 configure :build do
@@ -70,6 +70,21 @@ configure :build do
   activate :relative_assets
 
   activate :directory_indexes
+
+  activate :favicon_maker do |f|
+    f.template_dir  = File.join(root, 'source')
+    f.output_dir    = File.join(root, 'build')
+    f.icons = {
+      "favicon_template.png" => [
+        { icon: "apple-touch-icon-152x152-precomposed.png" },
+        { icon: "apple-touch-icon-114x114-precomposed.png" },
+        { icon: "apple-touch-icon-72x72-precomposed.png" },
+        { icon: "mstile-144x144", format: :png },
+        { icon: "favicon.png", size: "16x16" },
+        { icon: "favicon.ico", size: "64x64,32x32,24x24,16x16" },
+      ]
+    }
+  end
 
   # Or use a different image path
   # set :http_prefix, "/Content/images/"

@@ -1,38 +1,32 @@
 <?php
-require 'phpMailer/PHPMailerAutoload.php';
 
-$mail = new PHPMailer;
 
-$name = $_POST['name'];
-$email = $_POST['email'];
-$message = htmlentities($_POST['message'], ENT_COMPAT, 'UTF-8');
+    if(isset($_POST['name']) && isset($_POST['email']) && isset($_POST['message'])){
 
-$mail->isSMTP();                                      // Set mailer to use SMTP
-$mail->Host = 'smtp.gmail.com';  // Specify main and backup server
-$mail->SMTPAuth = true;                               // Enable SMTP authentication
-$mail->Username = 'rajalubenoit@gmail.com';                            // SMTP username
-$mail->Password = 'p99xrddy!!';                           // SMTP password
-$mail->SMTPDebug = 1;
-$mail->SMTPSecure = 'tls';                            // Enable encryption, 'ssl' also accepted
-$mail->Port = 587;
+        $toemail = 'rajalubenoit@gmail.com';
+        $name = $_POST['name'];
+        $email = $_POST['email'];
+        $message = htmlentities($_POST['message'], ENT_COMPAT, 'UTF-8');
+        $subject = "Contact via portfolio";
 
-$mail->From = $email;
-$mail->FromName = $name;
-$mail->addAddress('rajalubenoit@gmail.com', 'Benoit Rajalu');  // Add a recipient
-$mail->addReplyTo($email, $name);
+        $headers = 'Mime-Version: 1.0'."\r\n"; //header
+        $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+        $headers .= 'From: '. $name .' <'.$email.'>'."\r\n\r\n";
 
-$mail->WordWrap = 50;                                 // Set word wrap to 50 characters
-$mail->isHTML(true);                                  // Set email format to HTML
 
-$mail->Subject = 'Contact portfolio';
-$mail->Body    = '<p>' . $message . '</p><p>' . $name . ' - ' . $email . '</p>' ;
+        $msg='<p>' . stripslashes($message) . '</p><p>' . $name . ' - ' . $email . '</p>'; 
 
-if(!$mail->send()) {
-   echo 'Message could not be sent.';
-   echo 'Mailer Error: ' . $mail->ErrorInfo;
-   exit;
-}
 
-echo 'Message has been sent';
+        if(mail($toemail, $subject, $msg,  $headers)) {
+        echo 'Your email was sent successfully.';
+        } else {
+        echo 'There was a problem sending your email.';
+        }
+    }
+    else{
+        echo "failed";
+    }
 
+
+    
 ?>

@@ -54,9 +54,37 @@ if (!(window.console && console.log)) {
 	}
 
 // Backstreches
+	var copySize = function(){
+		if(Modernizr.mq('only all and (min-width: 781px)')){
+			$(".copySize").each(function(){
+				var size = $(this).siblings(".columns").height();
+				$(this).css("height", size);
+			})
+		}
+		else{
+			$(".copySize").each(function(){
+				$(this).css("height", "200px");
+			})
+		}
+	}
+	copySize();
 	$(".backstretch").each(function(){
 		$(this).find(".source").hide();
 	})
+	var autoSize = function(){
+		if(Modernizr.mq('only all and (min-width: 781px)')){
+			$(".autoSize").each(function(){
+				var size = $(this).parent(".columns").height();
+				$(this).css("height", size);
+			})
+		}
+		else{
+			$(".autoSize").each(function(){
+				$(this).css("height", "200px");
+			})
+		}
+	}
+	autoSize();
 
 $(window).load(function () {
 	// Parsley
@@ -76,13 +104,15 @@ $(window).load(function () {
 	// Backstretch
 		$(".backstretch").each(function(){
 			var src = $(this).find(".source").attr("src");
-			$(this).backstretch(src);
+			$(this).backstretch(src, {speed: 300});
 		})
 
 	// Vertical align
 		verticalAlign();
 		$(window).resize(function(){
 			verticalAlign();
+			copySize();
+			autoSize();
 		})
 
 	// Work
@@ -107,6 +137,27 @@ $(window).load(function () {
 		        tl.reverse();
 		        tr.reverse();
 		    });
+		});
+
+	// Scroll top
+		$(function () {
+			$(window).scroll(function () {
+				if ($(this).scrollTop() > 200) {
+					$('#scrollTop').addClass("show");
+					$('#scrollTop').removeClass("hide");
+				} else {
+					$('#scrollTop').removeClass("show");
+					$('#scrollTop').addClass("hide");
+				}
+			});
+
+			// scroll body to 0px on click
+			$('#scrollTop').click(function () {
+				$('body,html').animate({
+					scrollTop: 0
+				}, 600);
+				return false;
+			});
 		});
 
 	// Place any jQuery/helper plugins in here.

@@ -1,6 +1,9 @@
 // Backstreches
 	.backstretch{
 		@include transition(all 300ms);
+		.source{
+			display:none;
+		}
 		&.main{
 			height:500px;
 			@media all and (max-width: 550px){
